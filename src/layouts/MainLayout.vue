@@ -68,7 +68,7 @@
       <q-img class="absolute-top" src="/assets/g02.jpg" style="height: 150px">
         <div class="absolute-bottom bg-transparent">
           <q-avatar size="56px" class="q-mb-sm">
-            <img src="/assets/g02.jpg" />
+            <img src="/assets/boy-avatar.png" />
           </q-avatar>
           <div class="text-weight-bold">Razvan Stoenescu</div>
           <div>@rstoenescu</div>
