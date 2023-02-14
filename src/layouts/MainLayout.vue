@@ -65,14 +65,10 @@
         </q-list>
       </q-scroll-area>
 
-      <q-img
-        class="absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
-        style="height: 150px"
-      >
+      <q-img class="absolute-top" src="/assets/g02.jpg" style="height: 150px">
         <div class="absolute-bottom bg-transparent">
           <q-avatar size="56px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            <img src="/assets/g02.jpg" />
           </q-avatar>
           <div class="text-weight-bold">Razvan Stoenescu</div>
           <div>@rstoenescu</div>
