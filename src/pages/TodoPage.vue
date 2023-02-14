@@ -1,37 +1,40 @@
 <template>
-  <div class="q-pa-md">
-    <q-table
-      title="Treats"
-      :rows="rows"
-      :columns="columns"
-      row-key="name"
-      :visible-columns="visibleColumns"
-    >
-      <template v-slot:top>
-        <img
-          style="height: 50px; width: 50px"
-          src="../assets/quasar-logo-inner.svg"
-        />
+  <q-page class="g-pa-lg">
+    <h5 class="q-mt-none">Send</h5>
+    <div class="q-pa-md">
+      <q-table
+        title="Treats"
+        :rows="rows"
+        :columns="columns"
+        row-key="name"
+        :visible-columns="visibleColumns"
+      >
+        <template v-slot:top>
+          <img
+            style="height: 50px; width: 50px"
+            src="../assets/quasar-logo-inner.svg"
+          />
 
-        <q-space />
+          <q-space />
 
-        <q-select
-          v-model="visibleColumns"
-          multiple
-          outlined
-          dense
-          options-dense
-          :display-value="$q.lang.table.columns"
-          emit-value
-          map-options
-          :options="columns"
-          option-value="name"
-          options-cover
-          style="min-width: 150px"
-        />
-      </template>
-    </q-table>
-  </div>
+          <q-select
+            v-model="visibleColumns"
+            multiple
+            outlined
+            dense
+            options-dense
+            :display-value="$q.lang.table.columns"
+            emit-value
+            map-options
+            :options="columns"
+            option-value="name"
+            options-cover
+            style="min-width: 150px"
+          />
+        </template>
+      </q-table>
+    </div>
+  </q-page>
 </template>
 <script>
 import { ref } from 'vue';
