@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>Quasar CLI with Vite App</q-toolbar-title>
+        <q-toolbar-title>Quasar CLI with Vite App </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -31,7 +31,7 @@
         "
       >
         <q-list padding>
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple to="/" exact>
             <q-item-section avatar>
               <q-icon name="inbox" />
             </q-item-section>
@@ -39,7 +39,7 @@
             <q-item-section> Inbox </q-item-section>
           </q-item>
 
-          <q-item active clickable v-ripple>
+          <q-item clickable v-ripple to="/star" exact>
             <q-item-section avatar>
               <q-icon name="star" />
             </q-item-section>
@@ -47,7 +47,7 @@
             <q-item-section> Star </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple to="/send" exact>
             <q-item-section avatar>
               <q-icon name="send" />
             </q-item-section>
@@ -65,25 +65,30 @@
         </q-list>
       </q-scroll-area>
 
-      <q-img class="absolute-top" src="/assets/g02.jpg" style="height: 150px">
+      <q-img class="absolute-top" src="../assets/g02.jpg" style="height: 150px">
         <div class="absolute-bottom bg-transparent">
           <q-avatar size="56px" class="q-mb-sm">
-            <img src="/assets/boy-avatar.png" />
+            <img src="../assets/boy-avatar.png" />
           </q-avatar>
-          <div class="text-weight-bold">Razvan Stoenescu</div>
-          <div>@rstoenescu</div>
+          <div class="text-weight-bold">Balzej Kunicki</div>
+          <div>
+            <div>{{ todaysDate }}</div>
+          </div>
         </div>
       </q-img>
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import { defineComponent, ref } from 'vue';
+import { date } from 'quasar';
 
 export default defineComponent({
   name: 'MainLayout',
@@ -96,7 +101,14 @@ export default defineComponent({
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
+      drawer: ref(false),
     };
+  },
+  computed: {
+    todaysDate() {
+      let timeStamp = Date.now();
+      return date.formatDate(timeStamp, 'dddd, D MMMM YYYY');
+    },
   },
 });
 </script>
