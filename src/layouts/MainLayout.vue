@@ -20,7 +20,7 @@
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
-      :width="200"
+      :width="250"
       :breakpoint="400"
     >
       <q-scroll-area
