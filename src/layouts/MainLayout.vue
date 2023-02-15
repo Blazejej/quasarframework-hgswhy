@@ -55,7 +55,7 @@
             <q-item-section> Send </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple to="/drafts" exact>
             <q-item-section avatar>
               <q-icon name="drafts" />
             </q-item-section>

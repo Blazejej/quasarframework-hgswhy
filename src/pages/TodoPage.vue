@@ -1,6 +1,6 @@
 <template>
   <q-page class="g-pa-lg">
-    <h5 class="q-mt-none">Send</h5>
+    <h5 class="q-mt-none">Todo</h5>
     <div class="q-pa-md">
       <q-table
         title="Treats"
